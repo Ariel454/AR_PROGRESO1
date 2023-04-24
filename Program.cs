@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using AR_PROGRESO1.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<AR_PROGRESO1Context>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("AR_PROGRESO1Context") ?? throw new InvalidOperationException("Connection string 'AR_PROGRESO1Context' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

@@ -1,0 +1,71 @@
+﻿@model IEnumerable<AR_PROGRESO1.Models.ARAURA>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.arCalificacionFinal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.arNombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.arCorreo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.arCodigoPostal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.arEstudianteNuevo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.arFechaNacimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.arPromedioConducta)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.arCalificacionFinal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.arNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.arCorreo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.arCodigoPostal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.arEstudianteNuevo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.arFechaNacimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.arPromedioConducta)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.arCodigo">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.arCodigo">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.arCodigo">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

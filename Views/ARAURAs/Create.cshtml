@@ -1,0 +1,63 @@
+﻿@model AR_PROGRESO1.Models.ARAURA
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ARAURA</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="arCalificacionFinal" class="control-label"></label>
+                <input asp-for="arCalificacionFinal" class="form-control" />
+                <span asp-validation-for="arCalificacionFinal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="arNombre" class="control-label"></label>
+                <input asp-for="arNombre" class="form-control" />
+                <span asp-validation-for="arNombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="arCorreo" class="control-label"></label>
+                <input asp-for="arCorreo" class="form-control" />
+                <span asp-validation-for="arCorreo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="arCodigoPostal" class="control-label"></label>
+                <input asp-for="arCodigoPostal" class="form-control" />
+                <span asp-validation-for="arCodigoPostal" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="arEstudianteNuevo" /> @Html.DisplayNameFor(model => model.arEstudianteNuevo)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="arFechaNacimiento" class="control-label"></label>
+                <input asp-for="arFechaNacimiento" class="form-control" />
+                <span asp-validation-for="arFechaNacimiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="arPromedioConducta" class="control-label"></label>
+                <input asp-for="arPromedioConducta" class="form-control" />
+                <span asp-validation-for="arPromedioConducta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
