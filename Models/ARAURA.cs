@@ -5,7 +5,7 @@ namespace AR_PROGRESO1.Models
     public class ARAURA
     {
         [Required(ErrorMessage = "Escriba el codigo.")]
-        [RegularExpression("^[0-9]{9}-[0-9]{1}$", ErrorMessage = "Escriba un codigo valido.")]
+        //[RegularExpression("^[0-9]{9}-[0-9]{1}$", ErrorMessage = "Escriba un codigo valido.")]
         [Key]
         public int arCodigo { get; set; }
 
